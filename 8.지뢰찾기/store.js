@@ -151,7 +151,7 @@ export default new Vuex.Store({
     [CLICK_MINE](state, {row, cell}) {
       state.halted = true;
       Vue.set(state.tableData[row],cell, CODE.CLICKED_MINE);
-      state.result = `${state.timer}에 게임이 종료되었습니다.`;
+      state.result = `${state.timer}초에 게임이 종료되었습니다.`;
     },
     [FLAG_CELL](state, {row, cell}) {
       if (state.tableData[row][cell] === CODE.MINE){
