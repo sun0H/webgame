@@ -92,6 +92,8 @@ export default new Vuex.Store({
         }
         if(checked.includes(row+'/'+cell)){ //이미 확인한 칸이면 재확인하지 않음
           return;
+        } else {
+          checked.push(row + '/' + cell);
         }
         let around = [];
         if (state.tableData[row-1]){
